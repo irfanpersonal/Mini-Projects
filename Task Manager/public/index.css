@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', monospace;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: lightblue;
+}
+
+.container {
+    border-radius: 10px;
+    background-color: lightcoral;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    min-height: 100px;
+    padding: 1rem;
+}
+
+input {
+    text-align: center;
+}
+
+input, button {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.tasks-container {
+    border-radius: 10px;
+    text-align: center;
+    background-color: greenyellow;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: rgb(241, 247, 181);
+}
+
+.options {
+    user-select: none;
+}
+
+.options > img {
+    margin-left: 0.5rem;
+}
+
+.smaller {
+    width: 30%;
+}
+
+.edit-name {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edit-name > input {
+    margin: 0;
+}
+
+.line {
+    text-decoration: line-through;
+}

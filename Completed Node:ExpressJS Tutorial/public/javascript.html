@@ -1,0 +1,41 @@
+<div>Enter in a fruit</div>
+<input type="text">
+<button>SUBMIT</button>
+<div class="results">Results: </div>
+<div class="message"></div>
+<script>
+    fetch('/api/v1/fruit').then(res => {
+        return res.json();
+    }).then(data => {
+        const fruits = data.data;
+        for (let i = 0; i < fruits.length; i++) {
+            document.querySelector('.results').textContent += fruits[i].name + ' ';
+        }
+    }).catch(error => {
+        document.querySelector('.message').textContent = 'Failed to fetch data';
+    });
+    document.querySelector('button').addEventListener('click', function() {
+        const fruitValue = document.querySelector('input').value;
+        fetch('/api/v1/addfruit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({fruit: fruitValue})
+        }).then(res => {
+            return res.json();
+        }).then(data => {
+            if (data.code) {
+                document.querySelector('.results').textContent += data.data + ' ';
+            }
+            else {
+                document.querySelector('.message').textContent = data.msg;
+                setTimeout(() => {
+                    document.querySelector('.message').textContent = '';
+                }, 500);
+            }
+        }).catch(error => {
+            console.log(error); 
+        });
+    });
+</script>
