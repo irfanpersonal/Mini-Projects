@@ -1,8 +1,8 @@
 {
-  "name": "Find-Sort-Select Route Practice",
+  "name": "find-sort-select-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon app.js"
   },

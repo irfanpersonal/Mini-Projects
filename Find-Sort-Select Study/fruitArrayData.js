@@ -1,4 +1,4 @@
-const foods = [
+const fruits = [
     {
         name: 'Apple',
         price: 1,
@@ -111,4 +111,4 @@ const foods = [
     }
 ];
 
-module.exports = foods;
+module.exports = fruits;
