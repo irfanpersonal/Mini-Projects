@@ -1,19 +1,17 @@
 require('dotenv').config();
 require('express-async-errors');
+const connectDB = require('./database/connect.js');
 const notFound = require('./middleware/not-found.js');
 const errorHandler = require('./middleware/error-handler.js');
-const connectDB = require('./database/connect.js');
-const fruitRouter = require('./routes/fruit.js');
+const fruitRouter = require('./routes/fruits.js');
 const express = require('express');
 const app = express();
-
-app.use(express.json());
 
 app.use('/api/v1/fruits', fruitRouter);
 
 app.get('/', (req, res) => {
     return res.status(200).send(`
-        <h1>Fruit Store</h1>
+        <h1>Fruit API</h1>
         <a href="/api/v1/fruits">Fruit Route</a><br>
         <a href="/api/v1/fruits/static">Fruit Route Static</a>
     `);
