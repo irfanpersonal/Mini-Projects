@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Game Library</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Irfan Mahmood">
+        <meta name="keywords" content="FILE, EXPRESS, SERVER">
+        <meta name="description" content="Game Library is a great tool to keep track of your games and rate them as you wish!">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+        <main>
+            <h1>Game Library</h1>
+            <div>Name</div>
+            <input id="name-input" type="text">
+            <div>Rating</div>
+            <input id="rating-input" type="number" min="0.1" max="5.0" step="0.1">
+            <div>Game Cover</div>
+            <input id="image-input" accept="image/*" type="file">
+            <div class="alert"></div>
+            <button style="display: block;">SUBMIT</button>
+            <div class="games">
+                <!-- <div class="game">
+                    <h1>Name</h1>
+                    <img src="/uploads/battlefield-4.jpeg" alt="This text will appear if the image fails to load (alt = alternative)">
+                </div> -->
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>
